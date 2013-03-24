@@ -13,6 +13,6 @@ cs.servers.create_image(parent_server.id, "parent")
 parent_image = next(image for image in cs.images.list() if image.name == "parent")
 pyrax.utils.wait_until(parent_image, 'status', ['ACTIVE', 'ERROR'], interval=45, attempts=0, verbose=True)
 
-cs.servers.create("child", parent_image.id, 2) 
+cs.servers.create("CHILD", parent_image.id, 2) 
 
 print 'Child server created.'
