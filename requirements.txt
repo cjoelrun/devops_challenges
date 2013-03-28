@@ -1,0 +1,2 @@
+python-novaclient>=2.10.0
+
